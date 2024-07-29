@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/alert.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="icon" href="icons/logoControleTotal.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Login</title>
+
+</head>
+
+<body>
+
+    <div class="background-container">
+        <img src="icons/fundo.jpeg" alt="fundo">
+    </div>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="icons/logoControleTotal.jpeg" alt="logo">
+            <form>
+                <h2><i class="fas fa-user"></i> Login</h2>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Seu E-mail" id="email" onchange="onChangeEmail()" required>
+                    <div class="error" id="email-required-error">Email é obrigatório</div>
+                    <div class="error" id="email-invalid-error">Email é inválido</div>
+                </div>
+                <div class="form-group">
+                    <div class="password-container">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Sua Senha" id="password" onchange="onChangePassword()" required>
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                            <i class="fas fa-eye" id="togglePassword"></i>
+                        </button>
+                    </div>
+                    <div class="error" id="password-required-error">Senha é obrigatória</div>
+                </div>
+                <div>
+                    <button type="button" class="login-button" id="login-button" disabled="true" onclick="login()">
+                        <i class="fas fa-sign-in-alt"></i> Entrar
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="login-button" id="recover-password-button" onclick="recoverPassword()" disabled="true">
+                        <i class="fas fa-key"></i> Recuperar senha
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- Botão de Suporte -->
+        <button type="button" class="support-button" onclick="suporte()">
+            <i class="fas fa-question-circle"></i>
+        </button>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/alert.js"></script>
+    <script src="js/validations.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="js/firebase-init.js"></script>
+    <script src="js/loading.js"></script>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.getElementById('togglePassword');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.classList.remove('fa-eye');
+                toggleButton.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.classList.remove('fa-eye-slash');
+                toggleButton.classList.add('fa-eye');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
