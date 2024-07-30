@@ -29,7 +29,7 @@ body {
     max-height: 80vh; 
     overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas com largura igual */
+    grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas com largura igual */
     grid-gap: 10px; /* Espaçamento entre os itens */
     grid-auto-rows: minmax(100px, auto); /* Altura mínima de 100px */
     margin-top: 20px; /* Adiciona uma margem de 20px na parte superior da grade */

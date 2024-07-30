@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Profissionais</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/alert.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" href="Imagem/fisioweb.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="Imagem/fisioweb.jpg" alt="Logo">
+        </div>
+        <a href="menu.html" class="return-button"> Menu <i class="fas fa-home"></i></a>
+        <div class="user-info">
+            <span id="userName">Carregando...</span>
+        </div>
+    </header>
+
+    <div class="background-container">
+    </div>
+    <div class="container">
+        <h1 class="centralize">Lista de Profissionais</h1>
+        <table id="pacientesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Pacientes serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/profissionais.js"></script>
+</body>
+
+</html>

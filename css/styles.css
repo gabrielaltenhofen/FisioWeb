@@ -1,0 +1,242 @@
+/* CSS existente */
+.header {
+    background-color: rgb(189, 64, 64);
+    color: white;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+}
+
+label {
+    font-weight: bold;
+    display: flex;
+    padding: 10px 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="time"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+}
+
+input {
+    width: 100%;
+}
+
+.obs {
+    width: 102%;
+}
+
+button {
+    background-color: #00bf6f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: #000;
+    border-color: #000;
+}   
+
+.return-button {
+    background-color: white;
+    padding: 10px;
+    color: rgba(66, 64, 64);
+    border: solid 1px;
+    border-radius: 180px;
+    border-color: white;
+    text-decoration: none;
+}
+
+.return-button:hover {
+    color: white;
+    background-color: rgba(66, 64, 64);
+}
+
+.pdf-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pdf-table th, .pdf-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.pdf-table th {
+    background-color: #f2f2f2;
+}
+
+.pdf-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.pdf-table tr:hover {
+    background-color: #ddd;
+}
+
+.tabela {
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: Arial, sans-serif; 
+}
+
+.tabela th, .tabela td {
+    border: 1px solid #000;
+    padding: 5px;
+    width: 70px;
+}
+
+.escolha {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 101%;
+}
+
+.tabela thead th {
+    border: none;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+}
+
+.pdf-table {
+    width: 100%;
+    font-size: 11px;
+}
+
+.pdf-table th, .pdf-table td {
+    border: 1px solid #000;
+    padding: 4px;
+    width: 70px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .content {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    form > div {
+        margin-bottom: 10px;
+    }
+
+    label {
+        padding: 5px 0;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="time"],
+    input[type="date"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        padding: 5px;
+    }
+
+    .obs {
+        width: 100%;
+    }
+
+    button {
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .return-button {
+        top: 40px;
+        left: 10px;
+        padding: 10px 20px;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+}
+
+/* CSS para centralizar a tabela e adicionar linhas divisórias */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Centraliza a tabela na horizontal */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center; /* Centraliza o texto */
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
