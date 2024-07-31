@@ -250,3 +250,14 @@ table tr:nth-child(even) {
 table tr:hover {
     background-color: #f1f1f1;
 }
+
+.cancel-button {
+    background-color: red;
+    border-color: red;
+}
+
+.cancel-button:hover {
+    background-color: white;
+    color: red;
+    border-color: red;
+}
