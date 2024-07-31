@@ -214,6 +214,10 @@ textarea {
     }
 }
 
+.table-responsive {
+    overflow-x: auto;
+}
+
 /* CSS para centralizar a tabela e adicionar linhas divisórias */
 .container {
     max-width: 1200px;

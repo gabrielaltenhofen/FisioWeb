@@ -27,19 +27,19 @@
     <div class="container">
         <h1>Atendimentos</h1>
         <button id="createAtendimentoButton">Criar Novo Atendimento</button>
-
+    
         <div id="atendimentoFormContainer" style="display: none;">
             <h2>Novo Atendimento</h2>
             <form id="atendimentoForm">
                 <label for="paciente">Paciente:</label>
                 <select id="paciente" required></select>
-
+    
                 <label for="profissional">Profissional:</label>
                 <select id="profissional" required></select>
-
+    
                 <label for="data">Data:</label>
                 <input type="date" id="data" required>
-
+    
                 <label for="hora">Horário Entrada:</label>
                 <input type="time" id="hora" required>
                 
@@ -49,23 +49,25 @@
                 <button type="button" id="cancelButton">Cancelar</button>
             </form>
         </div>
-
+    
         <h2>Lista de Atendimentos</h2>
-        <table id="atendimentosTable">
-            <thead>
-                <tr>
-                    <th>Paciente</th>
-                    <th>Profissional</th>
-                    <th>Data</th>
-                    <th>Entrada</th>
-                    <th>Saída</th>
-                </tr>
-            </thead>    
-            <tbody>
-                <!-- Atendimentos serão inseridos aqui -->
-            </tbody>
-        </table>
-    </div>
+        <div class="table-responsive">
+            <table id="atendimentosTable">
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Profissional</th>
+                        <th>Data</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                    </tr>
+                </thead>    
+                <tbody>
+                    <!-- Atendimentos serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>    
     <script src="js/atendimentos.js"></script>
     <script src="js/alert.js"></script>
 
