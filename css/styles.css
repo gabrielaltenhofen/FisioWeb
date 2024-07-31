@@ -7,6 +7,7 @@
 
 h1 {
     font-size: 24px;
+    color: #00bf6f;
     margin-bottom: 20px;
     text-align: center; /* Centraliza o título */
 }
@@ -27,10 +28,12 @@ label {
     flex-direction: column;
     gap: 5px;
     width: auto;
+    color: #00bf6f;
 }
 
 label {
     font-weight: bold;
+    
 }
 
 input[type="text"],
@@ -60,6 +63,7 @@ button {
     color: white;
     padding: 10px;
     border-radius: 5px;
+    border-color: #00bf6f;
     cursor: pointer;
     width: auto;
     margin-bottom: 10px;
@@ -67,14 +71,14 @@ button {
 
 button:hover {
     background-color: white;
-    color: #000;
-    border-color: #000;
+    color: #00bf6f;
+    border-color: #00bf6f;
 }   
 
 .return-button {
     background-color: white;
     padding: 10px;
-    color: rgba(66, 64, 64);
+    color: #00bf6f;
     border: solid 1px;
     border-radius: 180px;
     border-color: white;
