@@ -115,8 +115,13 @@ app.get('/atendimentos', async (req, res) => {
             JOIN usuarios AS pacientes ON atendimentos.usuarioid = pacientes.id 
             JOIN usuarios AS profissionais ON atendimentos.fisioterapeutaid = profissionais.id
         `);
+
         if (result.rows.length > 0) {
-            res.status(200).json(result.rows);
+            const formattedData = result.rows.map(row => ({
+                ...row,
+                data: new Date(row.data).toLocaleDateString('pt-BR'), // Formata a data para 'DD/MM/YYYY'
+            }));
+            res.status(200).json(formattedData);
         } else {
             res.status(404).json({ message: 'Nenhum atendimento encontrado' });
         }
@@ -124,6 +129,8 @@ app.get('/atendimentos', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
+
 
 // Rota para criar um novo atendimento
 app.post('/atendimentos', async (req, res) => {
