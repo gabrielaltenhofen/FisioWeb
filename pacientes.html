@@ -27,32 +27,34 @@
     </div>
     <div class="container">
         <h1 class="centralize">Lista de Pacientes</h1>
-        <table id="pacientesTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>Endereço</th>
-                    <th>Cidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Pacientes serão inseridos aqui -->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table id="pacientesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pacientes serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
     </div>
-    <script src="js/pacientes.js"></script>
-    <script src="js/menu.js"></script>
+        <script src="js/pacientes.js"></script>
+        <script src="js/menu.js"></script>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let usuario_logado = getCookie('userName');
-            let input = document.getElementById("userName").innerHTML = '<i class="fas fa-user"></i> <strong></strong> ' + usuario_logado;
-        });
-    </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let usuario_logado = getCookie('userName');
+                let input = document.getElementById("userName").innerHTML = '<i class="fas fa-user"></i> <strong></strong> ' + usuario_logado;
+            });
+        </script>
 </body>
 
 
