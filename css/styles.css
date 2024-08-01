@@ -48,7 +48,8 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 5px;
-    width: 98%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input {
