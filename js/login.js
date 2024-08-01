@@ -38,10 +38,6 @@ async function login() {
     }
 }
 
-function exibirAlertaErro(mensagem) {
-    alert(mensagem);
-}
-
 function onChangeEmail() {
     const email = document.getElementById('email').value;
     document.getElementById('login-button').disabled = !email;

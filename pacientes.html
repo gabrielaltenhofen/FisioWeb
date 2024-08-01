@@ -45,16 +45,16 @@
             </table>
         </div>
     </div>
-        <script src="js/pacientes.js"></script>
-        <script src="js/menu.js"></script>
+    <script src="js/pacientes.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/auth-guard.js"></script>
 
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                let usuario_logado = getCookie('userName');
-                let input = document.getElementById("userName").innerHTML = '<i class="fas fa-user"></i> <strong></strong> ' + usuario_logado;
-            });
-        </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let usuario_logado = getCookie('userName');
+            let input = document.getElementById("userName").innerHTML = '<i class="fas fa-user"></i> <strong></strong> ' + usuario_logado;
+        });
+    </script>
 </body>
 
 

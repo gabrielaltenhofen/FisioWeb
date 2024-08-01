@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 tableBody.appendChild(row);
             });
         } else {
-            alert('Erro ao buscar pacientes: ' + (data.message || 'Erro desconhecido'));
+            exibirAlertaErro('Erro ao buscar pacientes: ' + (data.message || 'Erro desconhecido'));
         }
     } catch (error) {
-        alert('Erro ao conectar com a API: ' + error.message);
+        exibirAlertaErro('Erro ao conectar com a API: ' + error.message);
     }
 });
