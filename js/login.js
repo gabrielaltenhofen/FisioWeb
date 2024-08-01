@@ -21,6 +21,14 @@ async function login() {
         const data = await response.json();
 
         if (response.ok) {
+            // Pega o primeiro nome cortando no primeiro espaço
+            const primeiroNome = data.user.nome.split(' ')[0];
+
+            // Armazena o primeiro nome do usuário em um cookie
+            document.cookie = `userName=${primeiroNome}; path=/`;
+            document.cookie = `userLevel=${data.userLevel}; path=/`;
+
+            // Redireciona para a página do menu
             window.location.href = 'menu.html';
         } else {
             exibirAlertaErro(data.message || 'Erro no login');
@@ -28,6 +36,10 @@ async function login() {
     } catch (error) {
         exibirAlertaErro('Erro ao conectar com a API: ' + error.message);
     }
+}
+
+function exibirAlertaErro(mensagem) {
+    alert(mensagem);
 }
 
 function onChangeEmail() {

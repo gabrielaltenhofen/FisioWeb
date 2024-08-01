@@ -63,6 +63,13 @@
     <script src="js/menu.js"></script>
     <script src="js/alert.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let usuario_logado = getCookie('userName');
+            let input = document.getElementById("userName").innerHTML = '<i class="fas fa-user"></i> <strong></strong> ' + usuario_logado;
+        });
+    </script>
+
 </body>
 
 </html>
