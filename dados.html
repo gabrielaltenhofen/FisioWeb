@@ -15,7 +15,7 @@
     <div class="logo">
         <img src="Imagem/fisioweb.jpg" alt="Logo">
     </div>
-    <a href="menu.html" class="return-button"> Menu <i class="fas fa-home"></i></a>
+    <a href="menu_cliente.html" class="return-button"> Menu <i class="fas fa-home"></i></a>
     <div class="user-info">
         <span id="userName">Carregando...</span>
     </div>
@@ -40,26 +40,19 @@
                     <input type="text" id="rg" placeholder="RG (somente números)"required>
                     <input type="date" id="datenasci" placeholder="Data de DataNascimento"required>
                     
-
+                    <input type="password" id="lastPassword" placeholder="Senha atual" required>
                     <input type="password" id="password" placeholder="Senha" required>
                     <input type="password" id="confirmPassword" placeholder="Confirme a Senha" required>
 
 
-                    <label>Selecione o tipo de usuário:</label>
-                    <select class="escolha" id="tipoUser" required>
-                        <option value="secretario">Secretário(a)</option>
-                        <option value="fisioterapeuta">Fisioterapeuta</option>
-                        <option value="paciente">Paciente</option>
-                    </select>
-
-                    <button id="submitBtn"><i class="fas fa-paper-plane"></i> Cadastrar</button>
+                    <button id="salvarbt"><i class="fas fa-paper-plane"></i> Salvar</button>
 
                 </div>
             </div>
         </div>
     </div>
     </div>
-    <script src="js/cadastro.js"></script>
+    <script src="js/dados.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/alert.js"></script>
     <script src="js/auth-guard.js"></script>

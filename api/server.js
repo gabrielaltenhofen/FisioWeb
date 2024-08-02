@@ -85,6 +85,21 @@ app.get('/pacientes', async (req, res) => {
     }
 });
 
+app.get('/dados/paciente/:id', async (req, res) => {
+    try {
+        const { id } = req.params; // Extrai o parâmetro 'id' da URL
+
+        const result = await pool.query(`SELECT * FROM USUARIOS WHERE id = $1`,[id]);
+        if (result.rows.length > 0) {
+            res.status(200).json(result.rows);
+        } else {
+            res.status(404).json({ message: 'Nenhum paciente encontrado' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 app.get('/profissionais', async (req, res) => {
     try {
         const result = await pool.query(`SELECT * FROM USUARIOS WHERE Tipo = 'fisioterapeuta'`);
@@ -184,6 +199,41 @@ app.post('/disponibilidade', async (req, res) => {
     }
 });
 
+
+app.get('/atendimentos/:id', async (req, res) => {
+    try {
+        const { id } = req.params; // Extrai o parâmetro 'id' da URL
+
+        const result = await pool.query(`
+            SELECT 
+                atendimentos.numeroatendimento AS id, 
+                pacientes.nome AS pacienteNome, 
+                profissionais.nome AS profissionalNome, 
+                atendimentos.dataatendimento AS data, 
+                atendimentos.horario AS hora,
+                atendimentos.cid AS cid,
+                atendimentos.horariosaida AS horarioSaida,
+                atendimentos.obslocal AS obsLocal
+            FROM 
+                atendimentos 
+            JOIN usuarios AS pacientes ON atendimentos.usuarioid = pacientes.id 
+            JOIN usuarios AS profissionais ON atendimentos.fisioterapeutaid = profissionais.id
+            WHERE atendimentos.usuarioid = $1
+        `, [id]);
+
+        if (result.rows.length > 0) {
+            const formattedData = result.rows.map(row => ({
+                ...row,
+                data: new Date(row.data).toLocaleDateString('pt-BR'), // Formata a data para 'DD/MM/YYYY'
+            }));
+            res.status(200).json(formattedData);
+        } else {
+            res.status(404).json({ message: 'Nenhum atendimento encontrado' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 
 

@@ -23,13 +23,19 @@ async function login() {
         if (response.ok) {
             // Pega o primeiro nome cortando no primeiro espaço
             const primeiroNome = data.user.nome.split(' ')[0];
+            const tipo = data.user.tipo;
 
             // Armazena o primeiro nome do usuário em um cookie
             document.cookie = `userName=${primeiroNome}; path=/`;
-            document.cookie = `userLevel=${data.userLevel}; path=/`;
+            document.cookie = `userLevel=${tipo}; path=/`;
+            document.cookie = `userId=${data.user.id}; path=/`;
 
-            // Redireciona para a página do menu
-            window.location.href = 'menu.html';
+            if (tipo == 'paciente') {
+                window.location.href = "menu_cliente.html";
+            } else {
+                window.location.href = "menu.html";
+            }
+
         } else {
             exibirAlertaErro(data.message || 'Erro no login');
         }
